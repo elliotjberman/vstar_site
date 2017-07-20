@@ -1,8 +1,9 @@
 import './home.scss';
 import React, { Component } from 'react';
+import {Link} from 'react-router';
 import Cover from '../../images/cover_big.jpg';
 
-export default class AppComponent extends Component {
+export default class Home extends Component {
 
 	constructor(props) {
 		super(props);
@@ -11,7 +12,10 @@ export default class AppComponent extends Component {
 	render = () => {
     return (
       <div id="home">
-				<a id="cover" href="https://varsitystar.bandcamp.com/"><img src={Cover} /></a>
+
+				<div className="choice"><Link to="/album">Album</Link></div>
+				<div className="choice"><Link to="/contact">Contact</Link></div>
+
       </div>
     );
   }

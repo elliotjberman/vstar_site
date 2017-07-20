@@ -1,0 +1,122 @@
+$paleOrange: #fff1e7;
+$transition: 1.5s cubic-bezier(0.59, 0.14, 0.57, 1.2);
+
+$foreColor: rgb(20, 20, 20);
+$contrast: rgb(235, 235, 235);
+
+$spacing: 1.8%;
+
+#contact {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	left: 0;
+	top: 0;
+	// background: #e81a23;
+	// background: #2a62bb;
+	background: #145ab9;
+	padding: 15px $spacing $spacing $spacing;
+	box-sizing: border-box;
+
+	p, a, span {
+		font-family: Baskerville;
+		color: $foreColor;
+	}
+
+	h2 {
+		transition: 300ms;
+		font-weight: normal;
+		font-size: 28px;
+		color: $foreColor;
+		letter-spacing: -1.5px;
+		line-height: 0.9;
+		float: left;
+		width: 100%;
+
+		border-top: 2px solid $foreColor;
+		padding-top: 5%;
+		margin-bottom: 15px;
+		margin-top: 0;
+
+		&:hover {
+			color: $contrast;
+			border-color: $contrast;
+
+			a {
+				transition: 300ms;
+				color: $contrast;
+			}
+
+		}
+
+		a {
+			text-decoration: none;
+			color: initial;
+			cursor: pointer;
+			word-wrap: break-word;
+			font-family: Futura;
+		}
+
+
+	}
+
+	h2:hover+a {
+		color: $contrast;
+	}
+
+	#intro {
+		// padding-top: 20px;
+
+		h1 {
+			color: $foreColor;
+			font-size: 90px;
+			letter-spacing: -6px;
+			margin-top: 0;
+			border-bottom: 10px solid $foreColor;
+			padding-bottom: 10px;
+			margin-bottom: 0;
+			font-weight: normal;
+		}
+	}
+
+	.contrast {
+		color: $contrast;
+	}
+
+
+
+	.circle-container {
+		width: 100%;
+		// position: absolute;
+		float: left;
+		// left: 0;
+		// padding-left: $spacing;
+		// padding-right: $spacing;
+		box-sizing: border-box;
+		// bottom: 100px;
+	}
+
+	@for $i from 0 through 4 {
+		#circle-boy-#{$i} {
+			transition: $transition;
+			width: 100%;
+			height: auto;
+			padding-top: 100%;
+			position: relative;
+			border-radius: 50%;
+			background: rgb(255 - $i*45, 255 - $i*45, 255 - $i*45);
+			transform: rotate(0deg);
+
+			border-radius: 50% - $i*10;
+			@if $i == 4 {
+				background: $foreColor;
+			}
+
+		}
+
+	}
+
+
+}

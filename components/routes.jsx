@@ -1,3 +1,5 @@
+require('file?name=[name].[ext]!../index.html');
+
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Redirect, browserHistory } from 'react-router';

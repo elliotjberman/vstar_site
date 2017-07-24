@@ -7,6 +7,10 @@
 	align-items: center;
 	position: relative;
 
+	@media (max-width: 767px) {
+		flex-direction: column;
+	}
+
 	.choice {
 		height: 100%;
 		display: flex;
@@ -45,6 +49,11 @@
 			justify-content: center;
 			align-items: center;
 			color: #141414;
+
+			@media (max-width: 767px) {
+				font-size: 40px;
+				font-size: 10vw;
+			}
 		}
 
 	}

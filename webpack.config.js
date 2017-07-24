@@ -10,7 +10,7 @@ module.exports = {
 	},
 
 	entry: [
-		'./components/routes.jsx'
+		'./components/routes.jsx',
 	],
 
 	output: {

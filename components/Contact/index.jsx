@@ -37,11 +37,11 @@ class Contact extends React.Component {
 	}
 
 	showPhoneInfo = () => {
-		this.setState({phone: '978-729-3655'})
+		this.setState({phone: '978-729-3655'});
 	}
 
 	showEmail = () => {
-		this.setState({email: 'varsitystarmusic@gmail.com'})
+		this.setState({email: 'varsitystarmusic@gmail.com'});
 	}
 
   render = () => {

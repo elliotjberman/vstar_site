@@ -8,9 +8,9 @@ const app = express();
 app.use(express.static(__dirname + "/build"))
 
 
-// app.get('*', function(req, res) {
-//   res.sendFile(path.resolve(__dirname, 'index.html'));
-// });
+app.get('*', function(req, res) {
+  res.sendFile(path.resolve(__dirname, 'index.html'));
+});
 
 app.listen(port, host, (err) => {
 	if(err) console.log(err);

@@ -1,3 +1,5 @@
+$portrait: 414px;
+
 #home {
 	display: flex;
 	width: 100%;
@@ -7,7 +9,7 @@
 	align-items: center;
 	position: relative;
 
-	@media (max-width: 767px) {
+	@media (max-width: $portrait) {
 		flex-direction: column;
 	}
 
@@ -21,17 +23,31 @@
 
 		&:first-of-type {
 			background: #e4edf5;
-			&:hover {
+			@media (max-width: 767px) {
 				a {
 					color: #145ab9;
+				}
+			}
+			@media (min-width: 768px) {
+				&:hover {
+					a {
+						color: #145ab9;
+					}
 				}
 			}
 		}
 		&:nth-of-type(2) {
 			background: #145ab9;
-			&:hover {
+			@media (max-width: 767px) {
 				a {
 					color: #e4edf5;
+				}
+			}
+			@media (min-width: 768px) {
+				&:hover {
+					a {
+						color: #e4edf5;
+					}
 				}
 			}
 		}
@@ -50,7 +66,7 @@
 			align-items: center;
 			color: #141414;
 
-			@media (max-width: 767px) {
+			@media (max-width: $portrait) {
 				font-size: 40px;
 				font-size: 10vw;
 			}

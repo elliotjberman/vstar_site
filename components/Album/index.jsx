@@ -7,16 +7,35 @@ export default class Album extends Component {
 
 	constructor(props) {
 		super(props);
+
+		this.state = {
+			showing: false
+		}
+	}
+
+	hideMobileOverlay = (event) => {
+		console.log(this)
+		if (event.currentTarget.id == 'album') {
+			this.setState({
+				showing: false
+			});
+		}
+	}
+
+	showMobileOverlay = () => {
+		this.setState({
+			showing: true
+		});
 	}
 
 	render = () => {
     return (
-      <div id="album">
+      <div id="album" onClick={this.state.showing ? this.hideMobileOverlay : null}>
 
 				<Link id="back" to="/">Back</Link>
 
-				<div id="cover">
-					<div id="overlay">
+				<div id="cover" className={this.state.showing ? "covered" : null} onClick={this.showMobileOverlay}>
+					<div id="overlay" className={this.state.showing ? "showing" : null}>
 						<br/>
 						<a href="https://varsitystar.bandcamp.com/">Spotify</a>
 						<a href="https://varsitystar.bandcamp.com/">iTunes</a>

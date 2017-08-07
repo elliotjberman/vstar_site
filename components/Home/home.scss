@@ -1,3 +1,6 @@
+$off-white: #e4edf5;
+$blue: #145ab9;
+
 $portrait: 414px;
 
 #home {
@@ -22,16 +25,16 @@ $portrait: 414px;
 		transition: 200ms;
 
 		&:first-of-type {
-			background: #e4edf5;
+			background: $off-white;
 			@media (max-width: 767px) {
 				a {
-					color: #145ab9;
+					color: $blue;
 				}
 			}
 			@media (min-width: 768px) {
 				&:hover {
 					a {
-						color: #145ab9;
+						color: $blue;
 					}
 				}
 			}
@@ -40,13 +43,13 @@ $portrait: 414px;
 			background: #145ab9;
 			@media (max-width: 767px) {
 				a {
-					color: #e4edf5;
+					color: $off-white;
 				}
 			}
 			@media (min-width: 768px) {
 				&:hover {
 					a {
-						color: #e4edf5;
+						color: $off-white;
 					}
 				}
 			}

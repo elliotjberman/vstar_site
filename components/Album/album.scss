@@ -1,4 +1,5 @@
 $off-black: rgb(1, 28, 42);
+$off-white: #e4edf5;
 $portrait: 414px;
 
 #album {
@@ -10,24 +11,6 @@ $portrait: 414px;
 	flex-direction: column;
 	// background: #fafbfb;
 	background: #e4edf5;
-
-	#back {
-		// position: absolute;
-		margin-top: 20px;
-		color: $off-black;
-		transition: 200ms;
-		font-size: 26px;
-
-		@media (max-width: 767px) {
-			font-size: 20px;
-		}
-
-		@media (min-width: 768px) {
-			&:hover {
-				color: rgb(235, 79, 134);
-			}
-		}
-	}
 
 
 	h1 {
@@ -84,7 +67,7 @@ $portrait: 414px;
 			align-items: center;
 			flex-direction: column;
 			box-sizing: border-box;
-			border: solid 30px white;
+			// border: solid 30px white;
 
 			@media (max-width: $portrait) {
 				display: none;
@@ -122,11 +105,16 @@ $portrait: 414px;
 	}
 
 	#credit, #credit a {
+		transition: 800ms margin-bottom;
 		font-family: Baskerville;
 		font-weight: normal;
 		font-size: 16px;
-		margin-bottom: 40px;
 		font-style: italic;
 		color: $off-black;
+		margin-bottom: -200px;
+
+		&.showing {
+			margin-bottom: 40px;
+		}
 	}
 }

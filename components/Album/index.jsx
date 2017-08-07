@@ -16,6 +16,9 @@ export default class Album extends Component {
 	componentDidMount = () => {
 		document.getElementById("back").classList.add('showing');
 		document.getElementById("credit").classList.add('showing');
+		window.setTimeout(function(){
+			document.getElementById("cover").classList.add('showing');
+		}, 800)
 	}
 
 	hideMobileOverlay = (event) => {

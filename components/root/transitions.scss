@@ -1,0 +1,23 @@
+.animate-enter {
+  opacity: 0.01;
+	position: absolute;
+}
+
+.animate-enter.animate-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in !important;
+	z-index: 0;
+	position: absolute;
+}
+
+.animate-leave {
+  opacity: 0.99;
+	position: absolute;
+}
+
+.animate-leave.animate-leave-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in !important;
+	transition-delay: 1s;
+	z-index: 10;
+}

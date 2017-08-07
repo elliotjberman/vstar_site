@@ -96,7 +96,7 @@ $portrait: 414px;
 				font-family: Baskerville;
 				padding-bottom: 20px;
 
-				@media (max-width: 1100px) {
+				@media (max-width: 1100px) and (min-width: 768px) {
 					font-size: 12px;
 				}
 			}

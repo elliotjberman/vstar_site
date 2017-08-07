@@ -1,3 +1,6 @@
+$off-black: rgb(1, 28, 42);
+$off-white: #e4edf5;
+
 html, body, #app, .root {
   margin: 0;
 	height: 100%;
@@ -47,7 +50,7 @@ $spacing: 1.8%;
 }
 
 @for $i from 1 through 4 {
-	.fifth.space-#{$i} {
+	.space-#{$i} {
 		margin-left: 20% * $i;
 	}
 }
@@ -62,4 +65,29 @@ $spacing: 1.8%;
 	box-sizing: border-box;
 	overflow: hidden;
 	float: left;
+}
+
+
+#back {
+
+	margin-top: -200px;
+	transition: 800ms margin-top, 200ms color;
+
+	&.showing {
+		margin-top: 20px;
+	}
+
+	font-family: Futura !important;
+	color: $off-black;
+	font-size: 26px;
+
+	@media (max-width: 767px) {
+		font-size: 20px;
+	}
+
+	@media (min-width: 768px) {
+		&:hover {
+			color: rgb(235, 79, 134);
+		}
+	}
 }

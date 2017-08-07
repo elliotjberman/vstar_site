@@ -13,8 +13,12 @@ export default class Album extends Component {
 		}
 	}
 
+	componentDidMount = () => {
+		document.getElementById("back").classList.add('showing');
+		document.getElementById("credit").classList.add('showing');
+	}
+
 	hideMobileOverlay = (event) => {
-		console.log(this)
 		if (event.currentTarget.id == 'album') {
 			this.setState({
 				showing: false

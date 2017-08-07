@@ -18,11 +18,11 @@ $portrait: 414px;
 	flex-direction: column;
 
 	#back {
-		color: #fcae2f;
+		color: rgb(235, 79, 134);
 
 		@media (min-width: 768px) {
 			&:hover {
-				color: rgb(235, 79, 134);
+				color: #fcae2f;
 			}
 		}
 	}

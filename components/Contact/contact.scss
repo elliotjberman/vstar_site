@@ -1,5 +1,6 @@
 $off-white: #e4edf5;
 $blue: #145ab9;
+$yellow: #fcae2f;
 
 $portrait: 414px;
 
@@ -22,7 +23,7 @@ $portrait: 414px;
 
 		@media (min-width: 768px) {
 			&:hover {
-				color: #fcae2f;
+				color: $yellow;
 			}
 		}
 	}
@@ -36,7 +37,7 @@ $portrait: 414px;
 			justify-content: space-between;
 			width: 100%;
 			transition: 1600ms opacity, 800ms bottom;
-			min-height: 180px;
+			min-height: 160px;
 
 			@media (max-width: 767px) {
 				flex-direction: column;
@@ -57,7 +58,7 @@ $portrait: 414px;
 			}
 
 			div, a {
-				border-left: 1px solid white;
+				border-left: 1px solid rgba(255,255,255, 0.5);
 				transition: 200ms;
 
 				&:first-child {
@@ -68,16 +69,19 @@ $portrait: 414px;
 			@media (min-width: 768px) {
 				a:hover {
 					padding-left: .8%;
+					border-color: $yellow;
 					h2 {
 						transition: 200ms;
-						color: #fcae2f;
+						color: $yellow;
 					}
 				}
 			}
 
-			@for $i from 2 through 4 {
-				.grid:nth-child(#{$i}) {
-					background-color: rgba(10, 10, 10, $i*$i/16);
+			@media (max-width: 767px) {
+				@for $i from 2 through 4 {
+					.grid:nth-child(#{$i}) {
+						background-color: rgba(10, 10, 10, $i*$i/16);
+					}
 				}
 			}
 
@@ -93,12 +97,20 @@ $portrait: 414px;
 			h2 {
 				font-weight: normal;
 				color: white;
-				font-size: 16px;
-				font-family: Baskerville;
-				padding-bottom: 20px;
+				font-size: 20px;
+				font-family: Medio, Baskerville, serif;
+				padding-bottom: 18px;
+				margin-top: 10px;
 
-				@media (max-width: 1100px) and (min-width: 768px) {
-					font-size: 12px;
+				@media (max-width: 1300px) and (min-width: 1041px) {
+					font-size: 16px;
+				}
+				@media (max-width: 1040px) and (min-width: 916px) {
+					font-size: 14px;
+				}
+
+				@media (max-width: 915px) and (min-width: 768px) {
+					font-size: 11.5px;
 				}
 			}
 

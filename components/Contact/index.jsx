@@ -1,8 +1,5 @@
-'use strict';
-
 import React from 'react';
 import { Link } from 'react-router';
-
 import './contact.scss';
 
 class Contact extends React.Component {
@@ -12,8 +9,10 @@ class Contact extends React.Component {
 	}
 
 	componentDidMount = () => {
-		document.getElementById("info-container").classList.add('showing');
-		document.getElementById("back").classList.add('showing');
+		setTimeout(function() {
+			document.getElementById("info-container").classList.add('showing');
+			document.getElementById("back").classList.add('showing');
+		}, 0)
 	}
 
 	spamProofEmail = () => {
@@ -42,7 +41,7 @@ class Contact extends React.Component {
   render = () => {
 		var path = this.props.location.pathname;
     return (
-	      <div id="contact">
+	      <div id="contact" className="transition-item">
 
 					<Link id="back" to="/">Back</Link>
 
@@ -52,7 +51,7 @@ class Contact extends React.Component {
 							<div className="grid fifth">
 								<h1>Contact</h1>
 							</div>
-							<a href="tel:" className="grid fifth space-1">
+							<a href="tel:9787293655" className="grid fifth space-1">
 								<h2>978.729.3655</h2>
 							</a>
 							{this.spamProofEmail()}

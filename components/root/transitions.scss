@@ -1,23 +1,59 @@
-.animate-enter {
-  opacity: 0.01;
-	position: absolute;
+$portrait: 414px;
+
+
+.transition-wrapper {
+  position: relative;
+  z-index: 1;
+  .transition-item {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
 }
 
-.animate-enter.animate-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in !important;
-	z-index: 0;
-	position: absolute;
+.transition-item {
+  overflow: auto;
+  height: 100vh;
+  background-color: #03a9f4;
+  transition: opacity 1s;
+
+  &.transition-appear {
+    opacity: 0;
+  }
+
+  &.transition-appear.transition-appear-active {
+    opacity: 1;
+  }
+  &.transition-leave {
+    opacity: 1;
+  }
+
+  &.transition-leave.transition-leave-active {
+    opacity: 0;
+  }
 }
 
-.animate-leave {
-  opacity: 0.99;
-	position: absolute;
-}
+#home .choice {
+	transition: color 200ms, width 750ms, height 750ms;
 
-.animate-leave.animate-leave-active {
-  opacity: 0.01;
-  transition: opacity 500ms ease-in !important;
-	transition-delay: 1s;
-	z-index: 10;
+	@media (min-width: $portrait+1) {
+		&.stretched {
+			width: 100%;
+		}
+
+		&.ignored {
+			width: 0%;
+		}
+	}
+
+	@media (max-width: $portrait) {
+		&.stretched {
+			height: 100%;
+		}
+
+		&.ignored {
+			height: 0%;
+		}
+	}
 }

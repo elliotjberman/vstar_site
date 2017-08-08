@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router';
 import Cover from '../../images/cover_big.jpg';
 
-export default class Album extends Component {
+class Album extends Component {
 
 	constructor(props) {
 		super(props);
@@ -14,11 +14,13 @@ export default class Album extends Component {
 	}
 
 	componentDidMount = () => {
-		document.getElementById("back").classList.add('showing');
-		document.getElementById("credit").classList.add('showing');
-		window.setTimeout(function(){
-			document.getElementById("cover").classList.add('showing');
-		}, 800)
+		setTimeout(function() {
+			document.getElementById("back").classList.add('showing');
+			document.getElementById("credit").classList.add('showing');
+			window.setTimeout(function(){
+				document.getElementById("cover").classList.add('showing');
+			}, 800)
+		}, 0);
 	}
 
 	hideMobileOverlay = (event) => {
@@ -37,7 +39,7 @@ export default class Album extends Component {
 
 	render = () => {
     return (
-      <div id="album" onClick={this.state.showing ? this.hideMobileOverlay : null}>
+      <div id="album" className="transition-item" onClick={this.state.showing ? this.hideMobileOverlay : null}>
 
 				<Link id="back" to="/">Back</Link>
 
@@ -59,3 +61,5 @@ export default class Album extends Component {
   }
 
 }
+
+export default Album

@@ -18,11 +18,11 @@ $portrait: 414px;
 	flex-direction: column;
 
 	#back {
-		color: #fcae2f;
+		color: rgb(235, 79, 134);
 
 		@media (min-width: 768px) {
 			&:hover {
-				color: rgb(235, 79, 134);
+				color: #fcae2f;
 			}
 		}
 	}
@@ -87,6 +87,7 @@ $portrait: 414px;
 				letter-spacing: -2px;
 				font-size: 50px;
 				margin-top: 0px;
+				margin-bottom: 5px;
 			}
 
 			h2 {

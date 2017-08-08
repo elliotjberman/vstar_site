@@ -1,7 +1,7 @@
 $off-black: rgb(1, 28, 42);
 $off-white: #e4edf5;
 
-html, body, #app, .root {
+html, body, #app, .root, .root > div {
   margin: 0;
 	height: 100%;
 }

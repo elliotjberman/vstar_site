@@ -1,5 +1,5 @@
 $portrait: 414px;
-
+$choiceTransition: 750ms cubic-bezier(0, 0, 0, 1);
 
 .transition-wrapper {
   position: relative;
@@ -16,7 +16,7 @@ $portrait: 414px;
   overflow: auto;
   height: 100vh;
   background-color: #03a9f4;
-  transition: opacity 1s;
+  transition: opacity 750ms;
 
   &.transition-appear {
     opacity: 0;
@@ -35,7 +35,7 @@ $portrait: 414px;
 }
 
 #home .choice {
-	transition: color 200ms, width 750ms, height 750ms;
+	transition: color 200ms, width $choiceTransition, height $choiceTransition;
 
 	@media (min-width: $portrait+1) {
 		&.stretched {

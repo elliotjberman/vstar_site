@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Medio;
+    src: url('../../fonts/medio.otf');
+    font-weight:400;
+}
+
 $off-black: rgb(1, 28, 42);
 $off-white: #e4edf5;
 
@@ -7,7 +13,7 @@ html, body, #app, .root, .root > div {
 }
 
 * {
-	font-family: Futura;
+	font-family: Futura, Helvetica, sans-serif;
 	text-decoration: none;
 }
 

@@ -46,9 +46,9 @@ class Album extends Component {
 				<div id="cover" className={this.state.showing ? "covered" : null} onClick={this.showMobileOverlay}>
 					<div id="overlay" className={this.state.showing ? "showing" : null}>
 						<br/>
-						<a href="https://varsitystar.bandcamp.com/">Spotify</a>
-						<a href="https://varsitystar.bandcamp.com/">iTunes</a>
-						<a href="https://varsitystar.bandcamp.com/">Bandcamp</a>
+						<a href="https://open.spotify.com/album/0CdMLYwTEWKDFWUpNaewTP">Spotify</a>
+						<a href="https://itunes.apple.com/us/album/model-home/id1266944102">iTunes</a>
+						<a href="https://varsitystar.bandcamp.com/album/model-home">Bandcamp</a>
 						<br/>
 					</div>
 					<img src={Cover} />

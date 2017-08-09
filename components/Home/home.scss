@@ -1,4 +1,6 @@
 $off-white: #e4edf5;
+$off-black: rgb(1, 28, 42);
+
 $blue: #145ab9;
 
 $portrait: 414px;
@@ -66,7 +68,7 @@ $portrait: 414px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			color: #141414;
+			color: $off-black;
 
 			@media (max-width: $portrait) {
 				font-size: 40px;

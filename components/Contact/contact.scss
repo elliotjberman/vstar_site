@@ -5,7 +5,7 @@ $yellow: #fcae2f;
 $portrait: 414px;
 
 #contact {
-	min-height: 100%;
+	height: 100%;
 	width: 100%;
 	background-image: url('../../images/modelboy.jpg');
 	background-position: center;
@@ -37,7 +37,7 @@ $portrait: 414px;
 			justify-content: space-between;
 			width: 100%;
 			transition: 1600ms opacity, 800ms bottom;
-			min-height: 160px;
+			min-height: 180px;
 
 			@media (max-width: 767px) {
 				flex-direction: column;
@@ -98,9 +98,11 @@ $portrait: 414px;
 				font-weight: normal;
 				color: white;
 				font-size: 20px;
-				font-family: Medio, Baskerville, serif;
+				font-family: 'Medio', 'Baskerville', serif;
+				font-weight: 0;
 				padding-bottom: 18px;
 				margin-top: 10px;
+				letter-spacing: -.5px;
 
 				@media (max-width: 1300px) and (min-width: 1041px) {
 					font-size: 16px;
@@ -109,7 +111,7 @@ $portrait: 414px;
 					font-size: 14px;
 				}
 
-				@media (max-width: 915px) and (min-width: 768px) {
+				@media (max-width: 915px) and (min-width: 700px) {
 					font-size: 11.5px;
 				}
 			}
